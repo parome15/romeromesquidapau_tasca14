@@ -1,6 +1,6 @@
 // Aqui incluim el comportament de la pagina al ejecutar el boto del formulari
 $(document).ready(function() {
-    $("#formulario").submit(function(evento){
+    $("#formulari").submit(function(evento){
         //Hem de fer una transformació dels valors del input de dates ja que sino no funcionara ens donara error les dades.
         var dataInici = new Date($('#dataInici').val());
         var dataFinal = new Date($('#dataFinal').val());
@@ -13,9 +13,9 @@ $(document).ready(function() {
         //Si el valor incial de la data inici es menor a la data final es mostrara la informació del curs,
         // en cas contrari donara error. I sortira un missatge per mostrar la equivocacio de dades.
         if (dataInici < dataFinal){    
-            alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nombreCurso").val()+"\n"+
-            "Tipus de curs: "+$("#tipoCurso").val()+"\n"+
-            "Nom del professor: "+$("#nombreProfesor").val()+"\n"+
+            alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nomCurs").val()+"\n"+
+            "Tipus de curs: "+$("#tipusCurso").val()+"\n"+
+            "Nom del professor: "+$("#nomProfessor").val()+"\n"+
             "Data d'inici: "+dataIniciMostrar+"\n"+ 
             "Duració del curs en díes: "+dies+"\n"+
             "Hores: "+$("#hores").val());
