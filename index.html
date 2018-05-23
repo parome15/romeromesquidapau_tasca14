@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Aqui insertam la llibreria bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Aqui insertam la llibreria Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scripts.js"></script>
+  <title>Informació dels cursos.</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Aqui s'introdueixen els camps del formulari per introduir un curs-->
+    <h1> Insereix un curs </h1>
+    <!-- Es important incluir l'atribut que modificara el comportament del submit. 
+      Per tal motiu de que retorni fals i la pagina no es refresqui per les dades-->
+    <form class="form-horizontal" id="formulario" onsubmit="return false">
+      <div class="form-group">
+        <label for="nomCurs">Nom del curs</label>
+        <!-- Posam que la norma sigui que tots els camps siguin required, per introduir un curs totes les dades han de ser introduides -->
+        <input type="text" class="form-control" id="nomCurs" placeholder="Introdueix el nom del curs." required>
+      </div>
+      <div class="form-group">
+        <label for="tipusCurs">Tipus de curs</label>
+        <input type="text" class="form-control" id="tipusCurso" placeholder="Introdueix el tipus de curs." required>
+      </div>
+      <div class="form-group">
+        <label for="nomProfessor">Nom del professor</label>
+        <input type="text" class="form-control" id="nomProfessor" placeholder="Introdueix el nom del professor que impartira el curs." required>
+      </div>
+      <div class="form-group">
+        <label for="dataInici">Data d'inici curs</label>
+        <input type="date" class="form-control" id="dataInici" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="dataFinal">Data fi curs</label>
+        <input type="date" class="form-control" id="dataFinal" required>
+      </div>
+      <div class="form-group">
+        <label for="hores">Hores</label>
+        <!-- Se incluyen steps de incremento de 0.5 para permitir una mayor precision a la hora de poner las horas-->
+        <input type="number" class="form-control" id="hores" min="0" max="1000"  step="0.5" required>
+      </div>
+      <!-- Botón que permite ejecutar el submit y mostrar la ventana con la información del curso-->
+      <button type="submit" class="btn btn-primary" id="submit">¡Click aqui per mostrar curs!</button>
+    </form>
+  </div>
+</body>
+</html>
