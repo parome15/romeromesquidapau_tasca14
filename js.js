@@ -2,8 +2,8 @@
 $(document).ready(function() {
     $("#formulari").submit(function(evento){
         //Hem de fer una transformació dels valors del input de dates ja que sino no funcionara ens donara error les dades.
-        var dataInici = new Date($('#dataInici').val());
-        var dataFinal = new Date($('#dataFinal').val());
+        var dataInici = new Date($('#dataInici').value());
+        var dataFinal = new Date($('#dataFinal').value());
         var dataIniciMostrar = dataInici.getDate() +'/'+(dataInici.getMonth()+1)+'/'+dataInici.getFullYear();
         //Aquesta funcio el que fa es donar-nos es dias de diferencia entre les dues fetches.
         function difFechas(dataInici, dataFinal) {
