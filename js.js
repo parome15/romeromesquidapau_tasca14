@@ -15,14 +15,14 @@ function ferAlert(){
             //Si el valor incial de la data inici es menor a la data final es mostrara la informació del curs,
             // en cas contrari donara error. I sortira un missatge per mostrar la equivocacio de dades.
             if (dataInici < dataFinal){    
-                alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nomCurs").value()+"\n"+
+                alert("DETALLS DEL CURS\n"+"Nom del curs: "+document.getElementById("#nomCurs").value()+"\n"+
                 "Tipus de curs: "+document.getElementById("#tipusCurso").value()+"\n"+
                 "Nom del professor: "+document.getElementById("#nomProfessor").value()+"\n"+
                 "Data d'inici: "+dataIniciMostrar+"\n"+ 
                 "Duració del curs en díes: "+dies+"\n"+
                 "Hores: "+document.getElementById("#hores").value());
                 //Incluimos un reset para vaciar los campos del formulario 
-                $("#formulari")[0].reset();
+                document.getElementById("#formulari")[0].reset();
             }else{
                 alert ("Dates no válidas, introdueix una dada d'inici anterior a la data final.")
                 return false;
