@@ -6,7 +6,7 @@ $(document).ready(function() {
         var dataFinal = new Date($('#dataFinal').val());
         var dataIniciMostrar = dataInici.getDate() +'/'+(dataInici.getMonth()+1)+'/'+dataInici.getFullYear();
         //Aquesta funcio el que fa es donar-nos es dias de diferencia entre les dues fetches.
-        function difFechas(dataInici, dataFinal) {
+        function difDates(dataInici, dataFinal) {
             return Math.round((dataFinal-dataInici)/(1000*60*60*24));
         }
 
