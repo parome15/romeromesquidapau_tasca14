@@ -1,4 +1,20 @@
-    
+   
+   
+
+
+alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nomCurs").val()+"\n"+
+"Tipus de curs: "+$("#tipusCurso").val()+"\n"+
+"Nom del professor: "+$("#nomProfessor").val()+"\n"+
+"Data d'inici: "+dataIniciMostrar+"\n"+ 
+"Duració del curs en díes: "+dies+"\n"+
+"Hores: "+$("#hores").val());
+
+
+
+
+
+
+
  // Aqui incluim el comportament de la pagina al ejecutar el boto del formulari
 $(document).ready(function() {
     $("#formulari").submit(function(evento){
