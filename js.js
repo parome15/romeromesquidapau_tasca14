@@ -3,8 +3,8 @@
 $(document).ready(function() {
     $("#formulari").submit(function(evento){
         //Hem de fer una transformació dels valors del input de dates ja que sino no funcionara ens donara error les dades.
-        var dataInici = new Date($('#dataInici').value());
-        var dataFinal = new Date($('#dataFinal').value());
+        var dataInici = new Date($('#dataInici').val());
+        var dataFinal = new Date($('#dataFinal').val());
         var dataIniciMostrar = dataInici.getDate() +'/'+(dataInici.getMonth()+1)+'/'+dataInici.getFullYear();
         //Aquesta funcio el que fa es donar-nos es dias de diferencia entre les dues fetches.
         function difFechas(dataInici, dataFinal) {
@@ -15,17 +15,17 @@ $(document).ready(function() {
         //Si el valor incial de la data inici es menor a la data final es mostrara la informació del curs,
         // en cas contrari donara error. I sortira un missatge per mostrar la equivocacio de dades.
         if (dataInici < dataFinal){    
-            alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nomCurs").value()+"\n"+
-            "Tipus de curs: "+$("#tipusCurso").value()+"\n"+
-            "Nom del professor: "+$("#nomProfessor").value()+"\n"+
+            alert("DETALLS DEL CURS\n"+"Nom del curs: "+$("#nomCurs").val()+"\n"+
+            "Tipus de curs: "+$("#tipusCurso").val()+"\n"+
+            "Nom del professor: "+$("#nomProfessor").val()+"\n"+
             "Data d'inici: "+dataIniciMostrar+"\n"+ 
             "Duració del curs en díes: "+dies+"\n"+
-            "Hores: "+$("#hores").value());
+            "Hores: "+$("#hores").val());
             //Incluimos un reset para vaciar los campos del formulario 
             $("#formulari")[0].reset();
         }else{
             alert ("Dates no válidas, introdueix una dada d'inici anterior a la data final.")
             return false;    
-            }
-        })
-    });
+        }
+    })
+});
